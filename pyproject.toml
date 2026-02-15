@@ -1,0 +1,22 @@
+[project]
+name = "hw1"
+version = "0.1.0"
+description = "CSC 671 Homework Assignments"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+  "torch",
+  "numpy",
+  "matplotlib",
+]
+
+[[tool.uv.index]]
+name = "pytorch-cpu"
+url = "https://download.pytorch.org/whl/cpu"
+explicit = true
+
+[tool.uv.sources]
+torch = { index = "pytorch-cpu" }
+
+[dependency-groups]
+dev = ["jupyter"]
