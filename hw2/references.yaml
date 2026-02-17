@@ -1,0 +1,16 @@
+code:
+  type: misc
+  title: Matrix Multiplication Speedup – Source Code
+  author: Mohammed, Uzair Hamed
+  date: 2026
+  url: https://github.com/gamersekofy/csc-871
+  note: GitHub repository
+
+deepseek:
+  type: misc
+  title: DeepSeek R1 assisted with matplotlib troubleshooting, Typst syntax, and paper formatting standards
+  author: DeepSeek
+  date: 2025
+  url: https://www.deepseek.com/
+  note: Assisted with matplotlib troubleshooting and Typst formatting and syntax.
+  Accessed: 2026-02-16
