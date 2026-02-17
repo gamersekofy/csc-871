@@ -43,7 +43,7 @@ Matrix multiplication is a common operation in deep learning, and its raw implem
 
 = Methodology
 
-Since I am using a Snapdragon X (ARM64) computer without a CUDA-compatible GPU, I optimized the PyTorch implementation by explicitly casting the tensors to float32. While the prebuilt PyTorch distribution I downloaded likely leverages a general-purpose BLAS library like OpenBLAS, this library itself contains optimized kernels for ARM64. These kernels leverage the CPU's ARM NEON#footnote[ARM NEON technology: https://www.arm.com/technologies/neon] vector instructions, providing a significant speedup over the standard Python implementation while maintaining high precision.
+Since I am using a #box(height: 9pt, image("./resources/snapdragon-icon.svg")) Snapdragon X (ARM64) computer without a CUDA-compatible GPU, I optimized the PyTorch implementation by explicitly casting the tensors to float32. While the prebuilt PyTorch distribution I downloaded likely leverages a general-purpose BLAS library like OpenBLAS, this library itself contains optimized kernels for ARM64. These kernels leverage the CPU's ARM NEON#footnote[ARM NEON technology: https://www.arm.com/technologies/neon] vector instructions, providing a significant speedup over the standard Python implementation while maintaining high precision.
 
 == Matrix Generation
 
