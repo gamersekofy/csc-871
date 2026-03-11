@@ -5,7 +5,11 @@ description = "CSC 671 Homework Assignments"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
-  "torch",
+  #"torch",
+  # # Windows Snapdragon: Needs 2.7+ for native ARM64 support
+  "torch>=2.7.0 ; sys_platform == 'win32'",
+  # Intel Mac: Needs 2.2.2 as it's the last version with x86_64 wheels
+  "torch==2.2.2 ; sys_platform == 'darwin' and platform_machine == 'x86_64'",
   "numpy",
   "matplotlib",
 ]
@@ -16,7 +20,10 @@ url = "https://download.pytorch.org/whl/cpu"
 explicit = true
 
 [tool.uv.sources]
-torch = { index = "pytorch-cpu" }
+# Use a list of dictionaries with a marker to make the index conditional
+torch = [
+  { index = "pytorch-cpu", marker = "sys_platform == 'win32'" }
+]
 
 [dependency-groups]
 dev = ["jupyter"]
